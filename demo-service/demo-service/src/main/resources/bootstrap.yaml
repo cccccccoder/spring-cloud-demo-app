@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: demo-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  instance:
+    instance-id: ${spring.application.name}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 60
+  client:
+    service-url:
+      defaultZone: http://localhost:8089/eureka/
+    registry-fetch-interval-seconds: 10
+
+server:
+  port: 8001
+
+
+
+
