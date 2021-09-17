@@ -16,6 +16,6 @@ public class DemoAPIController implements DemoAPIService {
     private int servicePort;
 
     public String sayHello(String userName) {
-        return "hello, " + userName + ", reply from port:" + servicePort;
+        return "hello test search, " + userName + ", reply from port:" + servicePort;
     }
 }
